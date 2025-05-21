@@ -2,5 +2,4 @@
 
 센터수업 Flutter project.
 
-## Getting Started
 
