@@ -1,5 +1,5 @@
-import 'package:assignment2/keypad.dart';
 import 'package:assignment2/recent.dart';
+import 'package:assignment2/telephone.dart';
 import 'package:assignment2/telephone.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +12,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         splashColor: Colors.transparent,
-        highlightColor: Colors.transparent,
+        highlightColor: Colors.transparent
       ),
       home: DefaultTabController(
         initialIndex: 2,
@@ -34,33 +33,41 @@ class MyApp extends StatelessWidget {
                 Expanded(
                   child: TabBarView(
                     children: [
-                      KeypadView(),
-                      SingleChildScrollView(child: Recent()),
-                      SingleChildScrollView(child: Telephone()),
-                    ],
+                      Center(child: Text('키패드', style: TextStyle(color: Colors.red, fontSize: 100))),
+                      SingleChildScrollView(
+                        child: Recent(),
+                      ),
+                      SingleChildScrollView(
+                        child: Telephone(),
+                      )
+                    ]
                   ),
                 ),
                 SizedBox(
-                  height: 70,
-                  child: const TabBar(
-                    tabs: [
-                      Tab(text: '키패드'),
-                      Tab(text: '최근기록'),
-                      Tab(text: '연락처'),
-                    ],
-                    labelColor: Colors.white,
-                    labelStyle: TextStyle(fontSize: 22),
-                    unselectedLabelColor: Color.fromARGB(240, 151, 151, 151),
-                    unselectedLabelStyle: TextStyle(fontSize: 20),
-                    indicatorColor: Colors.white,
-                    indicatorWeight: 1,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
+                    height: 70,
+                    child: const TabBar(
+                      tabs: [
+                        Tab(text: '키패드'),
+                        Tab(text: '최근기록'),
+                        Tab(text: '연락처'),
+                      ],
+                      labelColor: Colors.white,
+                      labelStyle: TextStyle(
+                          fontSize: 22
+                      ),
+                      unselectedLabelColor: Color.fromARGB(240, 151, 151, 151),
+                      unselectedLabelStyle: TextStyle(
+                          fontSize: 20
+                      ),
+                      indicatorColor: Colors.white,
+                      indicatorWeight: 1,
+                    )
+                )
+              ]
+            )
+          )
+        )
+      )
     );
   }
 }
