@@ -1,14 +1,15 @@
-import 'package:assignment2/icons/chat.dart';
-import 'package:assignment2/icons/info.dart';
-import 'package:assignment2/icons/tell.dart';
-import 'package:assignment2/icons/video.dart';
+
+import 'package:test2/icons/chat.dart';
+import 'package:test2/icons/info.dart';
+import 'package:test2/icons/tell.dart';
+import 'package:test2/icons/video.dart';
 import 'package:flutter/material.dart';
 
-typedef OnInitCallback = void Function(ExpansionTileController);
-typedef OnUpdateCallback = void Function(ExpansionTileController);
+typedef OnInitCallback = void Function(ExpansibleController);
+typedef OnUpdateCallback = void Function(ExpansibleController);
 class ToggleButton extends StatelessWidget {
   final OnInitCallback _onInit;
-  final ExpansionTileController _controller = ExpansionTileController();
+  final ExpansibleController _controller = ExpansibleController();
   final OnUpdateCallback _onUpdate;
 
   ToggleButton({
@@ -16,8 +17,8 @@ class ToggleButton extends StatelessWidget {
     required OnInitCallback onInit,
     required OnUpdateCallback onUpdate
   }) :
-      this._onInit = onInit,
-      this._onUpdate = onUpdate;
+        this._onInit = onInit,
+        this._onUpdate = onUpdate;
 
   @override
   Widget build(BuildContext context) {

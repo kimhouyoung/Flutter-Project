@@ -1,7 +1,7 @@
-import 'package:assignment2/icons/info.dart';
-import 'package:assignment2/icons/video.dart';
-import 'package:assignment2/icons/chat.dart';
-import 'package:assignment2/icons/tell.dart';
+import 'package:test2/icons/info.dart';
+import 'package:test2/icons/video.dart';
+import 'package:test2/icons/chat.dart';
+import 'package:test2/icons/tell.dart';
 import 'package:flutter/material.dart';
 
 typedef OnInitCallback = void Function(ExpansionTileController);
@@ -11,13 +11,13 @@ class TogButton extends StatelessWidget {
   final ExpansionTileController _controller = ExpansionTileController();
   final OnUpdateCallback _onUpdate;
 
-   TogButton({
+  TogButton({
     super.key,
     required OnInitCallback onInit,
     required OnUpdateCallback onUpdate
   }) :
-      this._onInit = onInit,
-      this._onUpdate = onUpdate;
+        this._onInit = onInit,
+        this._onUpdate = onUpdate;
 
   @override
   Widget build(BuildContext context) {

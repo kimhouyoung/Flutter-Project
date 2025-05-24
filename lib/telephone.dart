@@ -1,4 +1,4 @@
-import 'package:assignment2/button/toggle_button.dart';
+import 'package:test2/button/toggle_button.dart';
 import 'package:flutter/material.dart';
 
 import 'button/toggle_button.dart';
@@ -11,10 +11,10 @@ class Telephone extends StatefulWidget {
 }
 
 class Tel extends State<Telephone> {
-   late List<ExpansionTileController> _controllers;
-   static final int maximumRecent = 2;
+  late List<ExpansionTileController> _controllers;
+  static final int maximumRecent = 2;
 
-   @override
+  @override
   void initState() {
     // TODO: implement initState
     super.initState();
@@ -29,7 +29,7 @@ class Tel extends State<Telephone> {
       child: ColoredBox(
         color: Colors.black,
         child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 100),
+          padding: EdgeInsets.symmetric(vertical: 50),
           child: Column(
             children: [
               Text('전화', style: TextStyle(color: Colors.white, fontSize: 70)),
@@ -54,21 +54,21 @@ class Tel extends State<Telephone> {
                 children: [
                   for (int c = 1; c <= maximumRecent; c++)
                     TogButton(
-                        onInit: (controller) {
-                          this._controllers.add(controller);
-                        },
-                        onUpdate: (controller) {
-                          int a = _controllers.length;
-                          for(int i = 0; i < a; i++) {
-                            var _con = this._controllers[i];
-                            if(_con != controller) {
-                              if(_con.isExpanded) {
-                                _con.collapse();
-                                break;
-                              }
+                      onInit: (controller) {
+                        this._controllers.add(controller);
+                      },
+                      onUpdate: (controller) {
+                        int a = _controllers.length;
+                        for(int i = 0; i < a; i++) {
+                          var _con = this._controllers[i];
+                          if(_con != controller) {
+                            if(_con.isExpanded) {
+                              _con.collapse();
+                              break;
                             }
                           }
-                        },
+                        }
+                      },
                     )
                 ],
               )

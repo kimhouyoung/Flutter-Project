@@ -1,4 +1,4 @@
-import 'package:assignment2/button/recent_toggle_button.dart';
+import 'package:test2/button/recent_toggle_button.dart';
 import 'package:flutter/material.dart';
 
 
@@ -22,7 +22,7 @@ class _Recent extends State<Recent> {
       child: ColoredBox(
         color: Colors.black,
         child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 100),
+          padding: EdgeInsets.symmetric(vertical: 50),
           child: Column(
             children: [
               Text('전화', style: TextStyle(color: Colors.white, fontSize: 70)),
